@@ -1,0 +1,35 @@
+fragment PagesParts on Pages {
+  __typename
+  title
+  description
+  heroImage
+  body
+}
+
+fragment ServicesParts on Services {
+  __typename
+  title
+  description
+  icon
+  order
+  details
+}
+
+fragment SettingsParts on Settings {
+  __typename
+  siteName
+  siteDescription
+  logo
+  contact {
+    __typename
+    email
+    phone
+    address
+  }
+  social {
+    __typename
+    facebook
+    instagram
+    telegram
+  }
+}
