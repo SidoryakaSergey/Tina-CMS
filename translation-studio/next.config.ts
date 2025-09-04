@@ -6,14 +6,6 @@ const nextConfig: NextConfig = {
   images: {
     unoptimized: true
   },
-  async rewrites() {
-    return [
-      {
-        source: "/admin",
-        destination: "/admin/index.html",
-      },
-    ];
-  },
   webpack(config) {
     config.module.rules.push({
       test: /\.md$/,

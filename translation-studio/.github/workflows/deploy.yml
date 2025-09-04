@@ -29,7 +29,9 @@ jobs:
       run: npm ci
 
     - name: Build project
-      run: npm run build
+      run: |
+        npm run build
+        touch out/.nojekyll
       env:
         NEXT_PUBLIC_TINA_CLIENT_ID: ${{ secrets.NEXT_PUBLIC_TINA_CLIENT_ID }}
         TINA_TOKEN: ${{ secrets.TINA_TOKEN }}
